@@ -17,7 +17,7 @@ export class HomeComponent implements OnInit {
       commentCount: 25,
       likeCount: 20,
       retweetCount: 25,
-      verified: true,
+      verified: false,
     },
     {
       id: '2',
