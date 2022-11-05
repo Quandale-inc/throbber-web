@@ -10,37 +10,44 @@
     <p class="text-[17px] font-bold">Home</p>
   </div>
 </header>
-<aside class="w-screen fixed h-screen top-0 bg-black/40 z-50" [class.hidden]="isMenuOpen">
+<aside
+  class="w-screen fixed h-screen top-0 z-50"
+  [ngClass]="isMenuOpen ? 'bg-black/40' : 'hidden'"
+>
   <div
-    [class.hidden]=""
-    class="fixed w-3/4 h-screen top-0 left-0 z-50  p-4 bg-white"
+    [ngClass]="isMenuOpen ? 'translate-x-0' : '-translate-x-full'"
+    class="fixed w-3/4 h-screen top-0 left-0 z-50 p-4 bg-white"
   >
     <div class="flex justify-between items-center">
       <p class="font-bold text-[17px]">Account Info</p>
       <!-- X -->
       <button (click)="closeSideMenu()">
         <svg
-        xmlns="http://www.w3.org/2000/svg"
-        fill="none"
-        viewBox="0 0 24 24"
-        stroke-width="1.5"
-        stroke="currentColor"
-        class="w-6 h-6"
-      >
-        <path
-          stroke-linecap="round"
-          stroke-linejoin="round"
-          d="M6 18L18 6M6 6l12 12"
-        />
-      </svg>
+          xmlns="http://www.w3.org/2000/svg"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke-width="1.5"
+          stroke="currentColor"
+          class="w-6 h-6"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            d="M6 18L18 6M6 6l12 12"
+          />
+        </svg>
       </button>
     </div>
     <img class="rounded-full w-11 mt-8" src="/assets/avi.jpeg" />
     <p class="font-bold text-[17px]">Lorem Name</p>
     <p class="text-gray-500 -mt-1 text-[15px]">@lorem_man</p>
     <div class="flex gap-5 pt-3">
-      <p class="text-[14px] text-gray-500"><span class="font-bold text-black">35</span> Following</p>
-      <p class="text-[14px] text-gray-500"><span class="font-bold text-black">24</span> Follower</p>
+      <p class="text-[14px] text-gray-500">
+        <span class="font-bold text-black">35</span> Following
+      </p>
+      <p class="text-[14px] text-gray-500">
+        <span class="font-bold text-black">24</span> Follower
+      </p>
     </div>
     <div>
       <!-- profile -->
@@ -81,7 +88,9 @@
       </div>
     </div>
     <!-- divider -->
-    <span class="w-[90%] h-[1px] bg-gray-400 block relative left-1/2 -translate-x-1/2 mt-4"></span>
+    <span
+      class="w-[90%] h-[1px] bg-gray-400 block relative left-1/2 -translate-x-1/2 mt-4"
+    ></span>
     <div class="flex py-4 justify-between">
       <!-- settings -->
       <p class="text-[15px] font-bold">Settings and Support</p>
@@ -104,4 +113,3 @@
 </aside>
 <router-outlet></router-outlet>
 <app-nav></app-nav>
-
