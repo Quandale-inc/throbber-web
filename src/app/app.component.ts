@@ -6,5 +6,12 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'throbber-web';
+  title = 'throbber';
+  isMenuOpen = false;
+  openSideMenu() {
+    this.isMenuOpen = true;
+  }
+  closeSideMenu() {
+    this.isMenuOpen = false;
+  }
 }
